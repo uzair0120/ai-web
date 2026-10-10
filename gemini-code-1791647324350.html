@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Secure Document Search Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Secure AI Portal</h2>
+            <div class="upload-section">
+                <h3>Upload Document</h3>
+                <input type="file" id="docFile" accept=".txt,.md">
+                <button onclick="uploadDocument()">Load Document</button>
+            </div>
+            <div class="file-list-section">
+                <h3>Loaded Files</h3>
+                <ul id="fileList"></ul>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="main-content">
+            <header class="chat-header">
+                <h2>Multilingual RAG & Voice AI Agent</h2>
+                <div class="voice-controls">
+                    <button id="startVoiceBtn" onclick="startVoiceRecognition()">🎙️ Live Voice</button>
+                    <button id="stopVoiceBtn" onclick="stopVoiceRecognition()" disabled>🛑 Stop</button>
+                </div>
+            </header>
+
+            <div class="chat-box" id="chatBox">
+                <div class="message assistant-msg">Assalam-o-Alaikum! Text file upload karein aur kisi bhi zabaan mein sawal poochein.</div>
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" id="userInput" placeholder="Yahan message likhein ya bolna shuru karein..." onkeydown="if(event.key==='Enter') sendMessage()">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
